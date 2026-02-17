@@ -1,6 +1,8 @@
 ---
 // Main index page - start writing your content here
 import Layout from "../layouts/Layout.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <Layout title="x0000">
@@ -9,10 +11,21 @@ import Layout from "../layouts/Layout.astro";
     <div class="container">
       <h1 class="medium mt-20vh left">x0000</h1>
       <div class="site-info">
-        <a class="link regular mt-4">juliusgrimm.dev</a>
+        <a class="link sf regular mt-4" onclick="window.open('https://juliusgrimm.dev', '_blank')">juliusgrimm.dev</a>
         <h3 class="sub-color regular mt-1">random projects domain</h3>
       </div>
-      <h3 class="sub-color copyright mt-5">© 2026 Julius Grimm</h3>
+      <h3 class="sub-color copyright mt-5">© {currentYear} Julius Grimm</h3>
+    </div>
+    <div class="project-container">
+      <div class="project">
+        <h2
+          class="link no-underline"
+          onclick="window.open('https://gc.x0000.de', '_blank')"
+        >
+          gc.x0000
+        </h2>
+        <h3 class="sub-color">Februar 2026</h3>
+      </div>
     </div>
   </main>
 </Layout>

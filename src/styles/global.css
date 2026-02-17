@@ -107,7 +107,7 @@ h3.sub-color {
 }
 
 /* Link Styling */
-a.link {
+.link {
     color: var(--text-color);
     text-decoration: underline;
     position: relative;
@@ -115,19 +115,23 @@ a.link {
     align-items: center;
     gap: 0.25rem;
     transition: color 0.3s ease;
+    cursor: pointer !important;
+}
+
+.link.sf {
     font-size: 1.5rem;
 }
 
-a.link:hover {
+.link:hover {
     color: var(--hover-color);
 }
 
-a.link.no-underline {
+.link.no-underline {
     text-decoration: none;
 }
 
 /* Link Arrow */
-a.link::after {
+.link::after {
     content: '↗';
     font-size: 1em;
     line-height: 1;
@@ -502,6 +506,10 @@ a.link::after {
     margin-top: 50vh;
 }
 
+.mt-60vh {
+    margin-top: 60vh;
+}
+
 .mb-10vh {
     margin-bottom: 10vh;
 }
@@ -564,39 +572,161 @@ a.link::after {
     margin-top: 2rem;
 }
 
-@media screen and (max-width: 456px) {
+/* General paragraph styling */
+p {
+    font-size: 1rem;
+}
+
+/* Mobile First - Extra Small Devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 6rem;
+        /* 64px */
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        /* 29px */
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        /* 19px */
+    }
+
+    p {
+        font-size: 0.9rem;
+        /* 14px */
+    }
+
+    .link.sf {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        width: 6rem;
+        margin-top: 1.5rem;
+        left: 0 !important;
+    }
+
+    .container {
+        padding: 1rem !important;
+    }
+
+    .project-container {
+        position: relative !important;
+        margin-top: 15vh !important;
+        padding: 1rem;
+    }
+
+    body {
+        padding-bottom: 15vh;
+    }
+
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media screen and (min-width:575px) and (max-width: 768px) {
+    h1 {
+        font-size: 7rem;
+        /* 112px */
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        /* 42px */
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        /* 22px */
+    }
+
+    p {
+        font-size: 1rem;
+        /* 16px */
+    }
+
     .logo {
         width: 8rem;
-        margin-top: 3rem;
-        position: relative;
-        left: 0;
+        margin-top: 2rem;
+    }
 
+    .container {
+        padding: 2rem;
+    }
+
+    .project-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 50vh;
+        text-align: right;
+        padding: 2rem;
     }
 }
 
-/* Container */
+@media (hover: none) and (pointer: coarse) {
+    .link:hover {
+        color: var(--text-color);
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media screen and (min-width: 2000px) {
+    h1 {
+        font-size: 12.5rem;
+        /* 200px - original size */
+    }
+
+    h2 {
+        font-size: 3.75rem;
+        /* 60px - original size */
+    }
+
+    h3 {
+        font-size: 1.875rem;
+        /* 30px - original size */
+    }
+
+    p {
+        font-size: 1.25rem;
+        /* 20px */
+    }
+
+    .logo {
+        width: 10rem;
+        margin-top: 2rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .project-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 60vh;
+        text-align: right;
+        padding: 2rem;
+    }
+}
+
+/* specific styling */
+
 .container {
     margin: 0 auto;
     padding: 2rem;
     position: relative;
 }
 
-/* General paragraph styling */
-p {
-    font-size: 1rem;
-}
-
-/* Desktop Styles */
-@media (min-width: 768px) {
-    .container {
-        padding: 0 2rem;
-    }
-
-    .logo {
-        font-size: 3rem;
-    }
-
-    p {
-        font-size: 1.25rem;
-    }
+.project-container {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-top: 60vh;
 }
