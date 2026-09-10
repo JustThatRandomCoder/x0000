@@ -37,8 +37,8 @@ body {
     line-height: 1.5;
 }
 
-.hiddeen {
-    display: node;
+.hidden {
+    display: node !important;
 }
 
 /* Headings */
