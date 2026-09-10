@@ -1,5 +1,14 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // Deine restliche Astro-Konfiguration...
+  
+  server: {
+    allowedHosts: ['x0000.de'] // Schaltet den Host für Astros internen Server frei
+  },
+  vite: {
+    preview: {
+      allowedHosts: ['x0000.de'] // Schaltet den Host für Vites Preview-Server frei
+    }
+  }
+});
